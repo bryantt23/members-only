@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :posts
+  
+  
   # When you create a new user, a new token should be created
   before_create :create_remember_token
   
